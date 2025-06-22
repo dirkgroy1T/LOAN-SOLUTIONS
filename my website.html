@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Solutions | Business & Personal Loans</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background: #f4f6fb;
+            color: #222;
+        }
+        header {
+            background: #2a5298;
+            color: #fff;
+            padding: 2rem 0 1rem 0;
+            text-align: center;
+        }
+        nav {
+            margin-top: 1rem;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1.5rem;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .hero {
+            background: linear-gradient(90deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 2rem;
+        }
+        .loan-types {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .loan-card {
+            background: #f4f6fb;
+            border-radius: 8px;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+            padding: 1.5rem;
+            width: 300px;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .loan-card h3 {
+            color: #2a5298;
+        }
+        .apply-btn {
+            background: #2a5298;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: background 0.2s;
+        }
+        .apply-btn:hover {
+            background: #1e3c72;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            background: #2a5298;
+            color: #fff;
+            margin-top: 2rem;
+        }
+        @media (max-width: 700px) {
+            .loan-types {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loan Solutions</h1>
+        <nav>
+            <a href="#business">Business Loans</a>
+            <a href="#personal">Personal Loans</a>
+            <a href="#apply">Apply Now</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>Your Trusted Partner for Business & Personal Loans</h2>
+        <p>Fast approvals, flexible terms, and expert support. Get the funds you need today!</p>
+    </section>
+    <div class="container">
+        <div class="loan-types">
+            <div class="loan-card" id="business">
+                <h3>Business Loans</h3>
+                <p>Grow your business with our tailored loan solutions. Competitive rates and quick approvals for small and large businesses.</p>
+                <button class="apply-btn" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+            </div>
+            <div class="loan-card" id="personal">
+                <h3>Personal Loans</h3>
+                <p>Cover personal expenses, consolidate debt, or fund a big purchase. Simple application and flexible repayment options.</p>
+                <button class="apply-btn" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="apply">
+        <h2>Apply for a Loan</h2>
+        <form id="application-form">
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" required style="width:100%;padding:0.5rem;margin-bottom:1rem;"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required style="width:100%;padding:0.5rem;margin-bottom:1rem;"><br>
+            <label for="phone number">Phone Number:</label><br>
+            <input type="phone number" id="phone number" name="phone number" required style="width:100%;padding:0.5rem;margin-bottom:1rem;"><br>
+            <label for="type">Loan Type:</label><br>
+            <select id="type" name="type" required style="width:100%;padding:0.5rem;margin-bottom:1rem;">
+                <option value="">Select</option>
+                <option value="business">Business Loan</option>
+                <option value="personal">Personal Loan</option>
+            </select><br>
+            <label for="amount">Loan Amount:</label><br>
+            <input type="number" id="amount" name="amount" required style="width:100%;padding:0.5rem;margin-bottom:1rem;"><br>
+        </form>
+<section id="supporting-documents">
+  <h2>Submit Supporting Documents</h2>
+  <p>Please upload the following documents to support your loan application:</p>
+  <form id="supporting-documents-form">
+    <div>
+      <label for="id-proof">ID Proof:</label>
+      <input type="file" id="id-proof" name="id-proof">
+    </div>
+    <div>
+      <label for="income-proof">Income Proof:</label>
+      <input type="file" id="income-proof" name="income-proof">
+    </div>
+    <div>
+      <label for="address-proof">Address Proof:</label>
+      <input type="file" id="address-proof" name="address-proof">
+    </div>
+    
+    <button class="apply-btn" type="submit">Submit Application</button>
+  </form>
+</section>
+        <p>We will review your application and get back to you in 24 hours</p>
+    </div>
+    <div class="container" id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@mbfincapital.co.za<br>
+        Phone: +27 79 811 3463</p>
+    </div>
+    <footer>
+        &copy; MBFINcapital_PvT_Ltd No 1234/56789 ___2025_Loan_Solutions. All rights reserved.
+    </footer>
+<!-- ...existing code... -->
+<script>
+document.getElementById('supporting-documents-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Validate file inputs
+    const idProof = document.getElementById('id-proof').files.length;
+    const incomeProof = document.getElementById('income-proof').files.length;
+    const addressProof = document.getElementById('address-proof').files.length;
+
+    if (!idProof || !incomeProof || !addressProof) {
+        alert('Please upload all required documents.');
+        return;
+    }
+
+    // Validate main application fields
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone number').value.trim();
+    const type = document.getElementById('type').value;
+    const amount = document.getElementById('amount').value;
+
+    if (!name || !email || !phone || !type || !amount) {
+        alert('Please fill in all application fields.');
+        return;
+    }
+
+    // Show success message
+    alert('Your application has been submitted successfully and will be processed within 24 hours! We will contact you soon.');
+    // Reset both forms
+    document.getElementById('application-form').reset();
+    document.getElementById('supporting-documents-form').reset();
+});
+</script>
+<!-- ...existing code... -->
+</body>
+</html>
+    
+</body>
+</html>
